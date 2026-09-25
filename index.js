@@ -406,7 +406,7 @@ function showTab(t,btn){
 /*function openModal(){document.getElementById('proj-modal').classList.add('open')}*/
 
 
-/* ── MODAL WITH SANITY INTEGRATION (TEXT, FORMATTING & CONTROLLED IMAGES) ── */
+/* ── MODAL WITH SANITY INTEGRATION (FULL FORMATTING + LINKS SUPPORT) ── */
 async function openModal(slug = 'naqa') {
   const modalOverlay = document.getElementById('proj-modal');
   const modalTitle = document.getElementById('m-title');
@@ -418,7 +418,7 @@ async function openModal(slug = 'naqa') {
   if (modalBody) modalBody.innerHTML = '<p style="text-align:center; padding:20px; color:#888;">جاري تحميل محتوى المشروع...</p>';
 
   try {
-    // 1. استعلام GROQ لجلب البيانات والصور بروابطها المباشرة
+    // 1. استعلام GROQ مع جلب روابط النصوص المضمّنة (markDefs)
     const query = encodeURIComponent(`*[_type=="post" && slug.current=="${slug}"][0]{
       title,
       body[]{
@@ -440,41 +440,53 @@ async function openModal(slug = 'naqa') {
 
       if (post.body && modalBody) {
         const htmlContent = post.body.map(block => {
-          // ── معالجة الصور والتحكم بحجم أصغر للصور المتتالية ──
-if (block._type === 'image' && block.imageUrl) {
-  return `
-    <div style="text-align: center; margin: 15px 0;">
-      <img 
-        src="${block.imageUrl}" 
-        alt="صورة المشروع" 
-        style="width: 60%; max-width: 350px; height: auto; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.08); display: block; margin: 0 auto;" 
-      />
-    </div>
-  `;
-}
+          // ── 2. معالجة الصور ──
+          if (block._type === 'image' && block.imageUrl) {
+            return `
+              <div style="text-align: center; margin: 15px 0;">
+                <img 
+                  src="${block.imageUrl}" 
+                  alt="صورة المشروع" 
+                  style="width: 60%; max-width: 350px; height: auto; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.08); display: block; margin: 0 auto;" 
+                />
+              </div>
+            `;
+          }
 
-          // ── 3. معالجة الكتل النصية والتنسيقات ──
+          // ── 3. معالجة الكتل النصية واستخراج الروابط ──
           if (block._type === 'block') {
-            // تنسيق النصوص الداخلية (الخط العريض والمائل)
+            const markDefs = block.markDefs || [];
+
             const formattedText = (block.children || []).map(child => {
               let text = child.text || '';
-              if (child.marks && child.marks.includes('strong')) {
-                text = `<strong>${text}</strong>`;
+
+              if (child.marks && child.marks.length > 0) {
+                child.marks.forEach(markKey => {
+                  // أ) إذا كان التنسيق رابطاً (link)
+                  const linkDef = markDefs.find(def => def._key === markKey);
+                  if (linkDef && linkDef._type === 'link') {
+                    text = `<a href="${linkDef.href}" target="_blank" rel="noopener noreferrer" style="color: #2563eb; text-decoration: underline; font-weight: 500;">${text}</a>`;
+                  }
+                  // ب) إذا كان النص عريضاً (Bold)
+                  if (markKey === 'strong') {
+                    text = `<strong>${text}</strong>`;
+                  }
+                  // ج) إذا كان النص مائلاً (Italic)
+                  if (markKey === 'em') {
+                    text = `<em>${text}</em>`;
+                  }
+                });
               }
-              if (child.marks && child.marks.includes('em')) {
-                text = `<em>${text}</em>`;
-              }
+
               return text;
             }).join('');
 
             if (!formattedText.trim()) return '';
 
-            // العناوين الرئيسية والفرعية
+            // العناوين وأنماط النصوص
             if (block.style === 'h1') return `<h1 style="font-size: 1.8rem; font-weight: bold; margin: 25px 0 12px; color: #111;">${formattedText}</h1>`;
             if (block.style === 'h2') return `<h2 style="font-size: 1.45rem; font-weight: bold; margin: 20px 0 10px; color: #222;">${formattedText}</h2>`;
             if (block.style === 'h3') return `<h3 style="font-size: 1.25rem; font-weight: bold; margin: 18px 0 8px; color: #333;">${formattedText}</h3>`;
-            
-            // الاقتباسات
             if (block.style === 'blockquote') return `<blockquote style="border-right: 4px solid #3b82f6; padding-right: 14px; margin: 18px 0; color: #555; font-style: italic;">${formattedText}</blockquote>`;
 
             // القوائم النقطية
