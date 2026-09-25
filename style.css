@@ -139,9 +139,9 @@ section{padding:5rem 2rem}
 .proj-card{background:var(--card);border:1px solid var(--border);border-radius:14px;
   overflow:hidden;transition:all .28s;cursor:pointer}
 .proj-card:hover{border-color:var(--txt2);transform:translateY(-3px)}
-.proj-thumb{height:150px;background:var(--bg3);display:flex;align-items:center;
+.proj-thumb{background:var(--bg3);display:flex;align-items:center;
   justify-content:center;font-size:2.4rem;border-bottom:1px solid var(--border)}
-.proj-body{padding:1rem; padding-top: 30px;}
+.proj-body{padding:1rem;}
 .proj-cat{font-size:10px;color:var(--txt3);letter-spacing:.07em;
   text-transform:uppercase;margin-bottom:5px}
 .proj-body h3{font-size:14.5px;font-weight:500;margin-bottom:7px;line-height:1.4}

@@ -446,7 +446,7 @@ async function openModal(slug = 'naqa') {
                 <img 
                   src="${block.imageUrl}" 
                   alt="صورة المشروع" 
-                  style="width: 60%; max-width: 350px; height: auto; border-radius: 5px; box-shadow: 0 3px 10px rgba(0,0,0,0.08); display: block; margin: 0 auto;" 
+                  style="width: 60%; max-width: 350px; height: auto; border-radius: 3px; box-shadow: 0 3px 10px rgba(0,0,0,0.08); display: block; margin: 0 auto;" 
                 />
               </div>
             `;
