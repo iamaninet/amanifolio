@@ -132,18 +132,13 @@ const STRINGS={
     "foot-name":"متخصصة في التعلم والتطوير","foot-tag":"أصمم تجارب تعلم رقمية ذات أثر حقيقي",
     "f-li":"لينكد إن","f-em":"البريد الإلكتروني","f-cv":"تحميل السيرة الذاتية",
     "foot-copy":"© 2026 · جميع الحقوق محفوظة · بُني بشغف للتعلم",
-    "mc":"✕ إغلاق","m-title":"تصميم تجربة تعلم قابلة للتوسع لمادة أساسيات الحاسب",
-    "m-meta":"تصميم تعليمي · ADDIE · التلعيب · LXD",
-    "mh1":"نظرة عامة","mp1":"تصميم تجربة تعلم رقمية تكيفية وقابلة للتوسع لمادة أساسيات الحاسب الآلي، موجهة لطلاب المرحلة المتوسطة.",
-    "mh2":"بيان المشكلة","mp2":"يفتقر الطلاب إلى تجربة تعلم رقمية متكاملة تراعي الفروق الفردية وتحفّز على الانخراط الفعلي.",
-    "mh3":"الفئة المستهدفة","mp3":"طلاب المرحلة المتوسطة (11–14 سنة) بمستويات معرفية متفاوتة في مجال التقنية.",
-    "mh4":"الأهداف التعليمية","mobj":"<li>تعرّف المكونات الأساسية للحاسب الآلي وتصنيفها</li><li>شرح آلية عمل نظام التشغيل والبرامج التطبيقية</li><li>تطبيق مهارات استخدام الحاسب في سياقات يومية</li><li>تحليل مشكلة تقنية بسيطة واقتراح حلول عملية</li>",
-    "mh5":"منهجية ADDIE","aa":"التحليل","ad":"التصميم","add":"التطوير","ai":"التطبيق","ae":"التقييم",
-    "mh6":"استراتيجية التلعيب","mp6":"تُوظَّف آليات التلعيب عبر نظام النقاط والشارات لتحفيز الانخراط، وخرائط التقدم لتعزيز الشعور بالإنجاز.",
-    "mh7":"نموذج كيركباتريك","k1":"رد الفعل","k2":"التعلم","k3":"السلوك","k4":"النتائج",
-    "mh8":"مؤشرات الأداء KPIs","kpi1":"رضا المتعلمين","kpi2":"معدل اجتياز التقييم","kpi3":"نقل السلوك","kpi4":"تحسين الانخراط",
-    "mh9":"النتائج والأثر","mp9":"أسهمت التجربة في تحسين ملحوظ للدافعية والانخراط، وأظهر الطلاب تقدماً قابلاً للقياس.",
-    "mh10":"الدروس المستفادة","mles":"<li>أهمية تحليل الفئة المستهدفة قبل اتخاذ أي قرار تصميمي</li><li>التلعيب يرفع الدافعية لكنه يحتاج توازناً مع الأهداف التعليمية</li><li>التقييم المستمر أثناء التطوير يوفر جهداً في مرحلة التنقيح</li><li>إشراك أصحاب المصلحة مبكراً يضمن توافق التصميم مع الاحتياجات الحقيقية</li>",
+
+
+    "mc":"✕ إغلاق",
+    
+
+
+    
     "bb1":"← رجوع","bb2":"← رجوع","bb3":"← رجوع","bb4":"← رجوع","bb5":"← رجوع","bb6":"← رجوع",
     "bc1g":"المعرض","bc2g":"المعرض","bc3g":"المعرض","bc4g":"المعرض","bc5g":"المعرض","bc6g":"المعرض",
     "bc2s":"السيناريوهات","bc3s":"خريطة الرحلة","bc4s":"العروض","bc5s":"النماذج","bc6s":"المواد التدريبية",
@@ -408,7 +403,109 @@ function showTab(t,btn){
 }
 
 /* ── MODAL ── */
-function openModal(){document.getElementById('proj-modal').classList.add('open')}
+/*function openModal(){document.getElementById('proj-modal').classList.add('open')}*/
+
+
+/* ── MODAL WITH SANITY INTEGRATION (TEXT, FORMATTING & CONTROLLED IMAGES) ── */
+async function openModal(slug = 'naqa') {
+  const modalOverlay = document.getElementById('proj-modal');
+  const modalTitle = document.getElementById('m-title');
+  const modalBody = document.getElementById('m-body');
+
+  if (modalOverlay) modalOverlay.classList.add('open');
+
+  if (modalTitle) modalTitle.innerText = 'جاري التحميل...';
+  if (modalBody) modalBody.innerHTML = '<p style="text-align:center; padding:20px; color:#888;">جاري تحميل محتوى المشروع...</p>';
+
+  try {
+    // 1. استعلام GROQ لجلب البيانات والصور بروابطها المباشرة
+    const query = encodeURIComponent(`*[_type=="post" && slug.current=="${slug}"][0]{
+      title,
+      body[]{
+        ...,
+        _type == "image" => {
+          ...,
+          "imageUrl": asset->url
+        }
+      }
+    }`);
+    const url = `https://sv25a4lt.api.sanity.io/v2021-10-21/data/query/production?query=${query}`;
+
+    const response = await fetch(url);
+    const data = await response.json();
+    const post = data.result;
+
+    if (post) {
+      if (modalTitle) modalTitle.innerText = post.title || '';
+
+      if (post.body && modalBody) {
+        const htmlContent = post.body.map(block => {
+          // ── معالجة الصور والتحكم بحجم أصغر للصور المتتالية ──
+if (block._type === 'image' && block.imageUrl) {
+  return `
+    <div style="text-align: center; margin: 15px 0;">
+      <img 
+        src="${block.imageUrl}" 
+        alt="صورة المشروع" 
+        style="width: 60%; max-width: 350px; height: auto; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.08); display: block; margin: 0 auto;" 
+      />
+    </div>
+  `;
+}
+
+          // ── 3. معالجة الكتل النصية والتنسيقات ──
+          if (block._type === 'block') {
+            // تنسيق النصوص الداخلية (الخط العريض والمائل)
+            const formattedText = (block.children || []).map(child => {
+              let text = child.text || '';
+              if (child.marks && child.marks.includes('strong')) {
+                text = `<strong>${text}</strong>`;
+              }
+              if (child.marks && child.marks.includes('em')) {
+                text = `<em>${text}</em>`;
+              }
+              return text;
+            }).join('');
+
+            if (!formattedText.trim()) return '';
+
+            // العناوين الرئيسية والفرعية
+            if (block.style === 'h1') return `<h1 style="font-size: 1.8rem; font-weight: bold; margin: 25px 0 12px; color: #111;">${formattedText}</h1>`;
+            if (block.style === 'h2') return `<h2 style="font-size: 1.45rem; font-weight: bold; margin: 20px 0 10px; color: #222;">${formattedText}</h2>`;
+            if (block.style === 'h3') return `<h3 style="font-size: 1.25rem; font-weight: bold; margin: 18px 0 8px; color: #333;">${formattedText}</h3>`;
+            
+            // الاقتباسات
+            if (block.style === 'blockquote') return `<blockquote style="border-right: 4px solid #3b82f6; padding-right: 14px; margin: 18px 0; color: #555; font-style: italic;">${formattedText}</blockquote>`;
+
+            // القوائم النقطية
+            if (block.listItem === 'bullet') {
+              return `<li style="margin-right: 20px; list-style-type: disc; line-height: 1.8; color: #333;">${formattedText}</li>`;
+            }
+
+            // النص العادي
+            return `<p style="margin-bottom: 12px; line-height: 1.8; color: #333; font-size: 1rem;">${formattedText}</p>`;
+          }
+
+          return '';
+        }).join('');
+
+        modalBody.innerHTML = htmlContent || '<p>لا يوجد محتوى لعرضه.</p>';
+      }
+    } else {
+      if (modalBody) modalBody.innerHTML = '<p style="text-align:center; color:#e53e3e; padding:20px;">لم يتم العثور على هذا المشروع.</p>';
+    }
+  } catch (error) {
+    console.error("Sanity Error:", error);
+    if (modalBody) modalBody.innerHTML = '<p style="text-align:center; color:#e53e3e; padding:20px;">حدث خطأ أثناء تحميل البيانات.</p>';
+  }
+}
+
+
+/*    -------------------    */
+
+
+
+
 function closeModal(){document.getElementById('proj-modal').classList.remove('open')}
 document.getElementById('proj-modal').addEventListener('click',function(e){if(e.target===this)closeModal()});
 
