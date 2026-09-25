@@ -143,8 +143,9 @@ const STRINGS={
     "bc1g":"المعرض","bc2g":"المعرض","bc3g":"المعرض","bc4g":"المعرض","bc5g":"المعرض","bc6g":"المعرض",
     "bc2s":"السيناريوهات","bc3s":"خريطة الرحلة","bc4s":"العروض","bc5s":"النماذج","bc6s":"المواد التدريبية",
     "docs-h":"وثائق التصميم التعليمي","docs-p":"مجموعة من وثائق التصميم التعليمي التي توثّق مراحل التحليل والتصميم والتطوير.",
-    "dt1":"نظرة عامة","dt2":"تحليل الاحتياجات","dt3":"وثيقة التصميم",
-    "dlp":"المشروع","dlm":"النموذج","dld":"المدة","dlt":"الأدوات",
+  
+    "dt1":" SAM نموذج ","dt2":"تحليل الاحتياجات","dt3":"وثيقة التصميم",
+
     "dlist-an":"<li>تحديد الفجوة بين الأداء الحالي والمستوى المستهدف</li><li>إجراء مقابلات مع المعلمين لفهم تحديات التدريس</li><li>تحليل المناهج الدراسية الحالية وتحديد مواطن القصور</li><li>رسم خريطة الفروق الفردية في مستوى التقنية</li><li>تحديد قيود البيئة التعليمية: أجهزة، اتصال، وقت</li>",
     "dlist-des":"<li>صياغة 4 أهداف تعليمية قابلة للقياس وفق نموذج SMART</li><li>تصميم هيكل المقرر: 4 وحدات × 3 دروس</li><li>اختيار استراتيجيات التلعيب: نقاط، شارات، لوحات الصدارة</li><li>تصميم مسارات التعلم التكيفي</li><li>تخطيط آليات التقييم التكويني والختامي</li>",
     "sb-h":"السيناريوهات التعليمية","sb-p":"تصور مرئي لتسلسل شاشات وحدات التعلم الإلكتروني قبل الدخول في مرحلة التطوير.",
@@ -191,23 +192,21 @@ const STRINGS={
     "foot-name":"Learning & Development Professional","foot-tag":"Designing meaningful digital learning experiences",
     "f-li":"LinkedIn","f-em":"Email","f-cv":"Download CV",
     "foot-copy":"© 2026 · All rights reserved · Built with passion for learning",
-    "mc":"✕ Close","m-title":"Scalable Learning Experience Design for Computer Fundamentals",
-    "m-meta":"Instructional Design · ADDIE · Gamification · LXD",
-    "mh1":"Project Overview","mp1":"An adaptive, scalable digital learning experience for Computer Fundamentals, designed for middle school students. Integrates gamification and learner experience design.",
-    "mh2":"Problem Statement","mp2":"Students lack a cohesive digital learning experience that accommodates individual differences and motivates genuine engagement, leading to reduced motivation and weak achievement.",
-    "mh3":"Target Audience","mp3":"Middle school students (ages 11–14) with varying levels of prior technology knowledge.",
-    "mh4":"Learning Objectives","mobj":"<li>Identify and classify core computer components</li><li>Explain how operating systems and applications work</li><li>Apply computer skills in real-world daily contexts</li><li>Analyze a simple technical problem and propose practical solutions</li>",
-    "mh5":"ADDIE Methodology","aa":"Analysis","ad":"Design","add":"Development","ai":"Implementation","ae":"Evaluation",
-    "mh6":"Gamification Strategy","mp6":"Gamification mechanics include a points-and-badges system, progress maps, adaptive challenges, and collaborative group elements.",
-    "mh7":"Kirkpatrick Model","k1":"Reaction","k2":"Learning","k3":"Behavior","k4":"Results",
-    "mh8":"KPIs","kpi1":"Learner Satisfaction","kpi2":"Assessment Pass Rate","kpi3":"Behavioral Transfer","kpi4":"Engagement Improvement",
-    "mh9":"Results & Impact","mp9":"The experience contributed to a notable improvement in motivation and engagement. Students demonstrated measurable progress in knowledge and practical application.",
-    "mh10":"Lessons Learned","mles":"<li>Audience analysis is essential before any design decision</li><li>Gamification boosts motivation but needs balance with learning objectives</li><li>Continuous evaluation during development saves revision effort</li><li>Early stakeholder involvement ensures design aligns with real needs</li>",
+
+
+    "mc":"✕ Close",
+    "m-title":"sssssssssssss",
+    "m-meta":"Instructional Design · SAM · Gamification · LXD",
+
+
+
     "bb1":"← Back","bb2":"← Back","bb3":"← Back","bb4":"← Back","bb5":"← Back","bb6":"← Back",
     "bc1g":"Gallery","bc2g":"Gallery","bc3g":"Gallery","bc4g":"Gallery","bc5g":"Gallery","bc6g":"Gallery",
     "bc2s":"Storyboards","bc3s":"Journey Map","bc4s":"Presentations","bc5s":"Prototypes","bc6s":"Training Materials",
     "docs-h":"Instructional Design Documents","docs-p":"A collection of ID documents covering analysis, design, and development phases.",
-    "dt1":"Overview","dt2":"Needs Analysis","dt3":"Design Document",
+    
+    "dt1":"SAM Model","dt2":"Needs Analysis","dt3":"Design Document",
+
     "dlp":"Project","dlm":"Model","dld":"Duration","dlt":"Tools",
     "dlist-an":"<li>Identify the gap between current and target performance</li><li>Interview teachers to understand teaching challenges</li><li>Analyze existing curricula and identify gaps</li><li>Map individual differences in technology proficiency</li><li>Identify learning environment constraints: devices, connectivity, time</li>",
     "dlist-des":"<li>Write 4 measurable learning objectives using the SMART model</li><li>Design course structure: 4 units × 3 lessons each</li><li>Select gamification strategies: points, badges, leaderboards</li><li>Design adaptive learning paths based on learner performance</li><li>Plan formative and summative assessment mechanisms</li>",
