@@ -205,7 +205,7 @@ const STRINGS={
     "bc2s":"Storyboards","bc3s":"Journey Map","bc4s":"Presentations","bc5s":"Prototypes","bc6s":"Training Materials",
     "docs-h":"Instructional Design Documents","docs-p":"A collection of ID documents covering analysis, design, and development phases.",
     
-    "dt1":"SAM Model","dt2":"Needs Analysis","dt3":"Design Document",
+    "dt1":"SAM Model","dt2":"ADDIE Model","dt3":"Design Document",
 
     "dlp":"Project","dlm":"Model","dld":"Duration","dlt":"Tools",
     "dlist-an":"<li>Identify the gap between current and target performance</li><li>Interview teachers to understand teaching challenges</li><li>Analyze existing curricula and identify gaps</li><li>Map individual differences in technology proficiency</li><li>Identify learning environment constraints: devices, connectivity, time</li>",

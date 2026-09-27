@@ -398,8 +398,8 @@
     <div class="doc-viewer">
       <div class="doc-bar">
         <div class="doc-tabs">
-          <button class="d-tab on" onclick="dTab('dov',this)" id="dt1"> SAM نموذج </button>
-          <button class="d-tab" onclick="dTab('dan',this)" id="dt2">تحليل الاحتياجات</button>
+          <button class="d-tab on" onclick="dTab('dov',this)" id="dt1"> نموذج SAM</button>
+          <button class="d-tab" onclick="dTab('dan',this)" id="dt2">نموذج ADDIE</button>
           <button class="d-tab" onclick="dTab('ddes',this)" id="dt3">وثيقة التصميم</button>
         </div>
         <button class="ctrl-btn" style="font-size:11px">↓</button>
@@ -411,7 +411,7 @@
 <!-- كود عرض الـ PDF المباشر داخل الـ Modal -->
 <div style="width: 100%; height: 70vh; overflow-y: auto; -webkit-overflow-scrolling: touch; border-radius: 8px;">
   <object 
-    data="file/sam model.pdf#view=FitH&toolbar=0&navpanes=0" 
+    data="file/sam_model.pdf#view=FitH&toolbar=0&navpanes=0" 
     type="application/pdf" 
     width="100%" 
     height="100%" 
@@ -419,7 +419,7 @@
     
     <!-- خيار احتياطي في حال عدم دعم المتصفح -->
     <iframe 
-      src="file/sam model.pdf#view=FitH&toolbar=0&navpanes=0" 
+      src="file/sam_model.pdf#view=FitH&toolbar=0&navpanes=0" 
       width="100%" 
       height="100%" 
       style="border: none;">
@@ -432,13 +432,25 @@
           </div>
         </div>
         <div class="d-sec" id="dan">
-          <ul class="doc-list" id="dlist-an">
-            <li>تحديد الفجوة بين الأداء الحالي والمستوى المستهدف</li>
-            <li>إجراء مقابلات مع المعلمين لفهم تحديات التدريس</li>
-            <li>تحليل المناهج الدراسية الحالية وتحديد مواطن القصور</li>
-            <li>رسم خريطة الفروق الفردية في مستوى التقنية</li>
-            <li>تحديد قيود البيئة التعليمية: أجهزة، اتصال، وقت</li>
-          </ul>
+          <div style="width: 100%; height: 70vh; overflow-y: auto; -webkit-overflow-scrolling: touch; border-radius: 8px;">
+  <object 
+    data="file/addie_model.pdf#view=FitH&toolbar=0&navpanes=0" 
+    type="application/pdf" 
+    width="100%" 
+    height="100%" 
+    style="min-height: 100%;">
+    
+    <!-- خيار احتياطي في حال عدم دعم المتصفح -->
+    <iframe 
+      src="file/addie_model.pdf#view=FitH&toolbar=0&navpanes=0" 
+      width="100%" 
+      height="100%" 
+      style="border: none;">
+    </iframe>
+  </object>
+</div>
+
+
         </div>
         <div class="d-sec" id="ddes">
           <ul class="doc-list" id="dlist-des">
