@@ -15,7 +15,7 @@ const DATA={
       {icon:"⚡",num:"06",name:"التعلم المدمج الفعّال",desc:"استراتيجيات دمج التعلم الوجاهي والرقمي لأعلى مشاركة.",tags:["Blended","Strategy"]},
     ],
     prototypes:[
-      {icon:"🌱",name:"رحلة الجهاز الأخير",desc:"نموذج تفاعلي يشمل فيديوهات تعليم مصغر وتمارين ونشاط تلعيب.",tags:["Interactive","Articulate","Gamification"]},
+      {icon:"🌱",name:"برنامج نقاء التوعوي | رحلة الجهاز الأخير",desc:"نموذج تفاعلي يشمل فيديوهات تعليم مصغر وتمارين ونشاط تلعيب.",tags:["Interactive","Articulate","Gamification"]},
     ],
     training:[
       {icon:"📘",name:"دليل المدرب — برنامج أساسيات الحاسب",desc:"دليل شامل يتضمن خطة الجلسة، الأنشطة، وأدوات التقييم.",tags:["Facilitator","Guide","F2F"]},
@@ -37,7 +37,7 @@ const DATA={
       {icon:"⚡",num:"06",name:"Effective Blended Learning",desc:"Strategies for blending face-to-face and digital learning to maximize engagement.",tags:["Blended","Strategy"]},
     ],
     prototypes:[
-      {icon:"🌱",name:"The Journey of the Last Device",desc:"Interactive prototype including video, exercises, and a gamification activity.",tags:["Interactive","Articulate","Gamification"]},
+      {icon:"🌱",name:"Naqa Awareness Program | The Journey of the Last Device",desc:"Interactive prototype including video, exercises, and a gamification activity.",tags:["Interactive","Articulate","Gamification"]},
     ],
     training:[
       {icon:"📘",name:"Facilitator Guide — Computer Fundamentals",desc:"Comprehensive guide with session plan, activities, and assessment tools.",tags:["Facilitator","Guide","F2F"]},
