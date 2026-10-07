@@ -15,10 +15,7 @@ const DATA={
       {icon:"⚡",num:"06",name:"التعلم المدمج الفعّال",desc:"استراتيجيات دمج التعلم الوجاهي والرقمي لأعلى مشاركة.",tags:["Blended","Strategy"]},
     ],
     prototypes:[
-      {icon:"💻",name:"وحدة مكونات الحاسب",desc:"نموذج تفاعلي يشمل فيديو وتمارين ونشاط تلعيب.",tags:["Interactive","Articulate","Gamification"]},
-      {icon:"🔐",name:"درس الأمن الرقمي",desc:"وحدة بأسلوب سيناريو لتعليم ممارسات الأمان الرقمي.",tags:["Scenario","eLearning"]},
-      {icon:"📱",name:"تطبيق التعلم المصغر",desc:"نموذج تطبيق موبايل لوحدات تعلم مصغر مدتها 5 دقائق.",tags:["Microlearning","Mobile","UX"]},
-      {icon:"🧩",name:"لعبة المطابقة التعليمية",desc:"نشاط تلعيبي يربط المفاهيم بتعريفاتها بأسلوب بطاقات تفاعلية.",tags:["Game","Matching","Assessment"]},
+      {icon:"🌱",name:"رحلة الجهاز الأخير",desc:"نموذج تفاعلي يشمل فيديوهات تعليم مصغر وتمارين ونشاط تلعيب.",tags:["Interactive","Articulate","Gamification"]},
     ],
     training:[
       {icon:"📘",name:"دليل المدرب — برنامج أساسيات الحاسب",desc:"دليل شامل يتضمن خطة الجلسة، الأنشطة، وأدوات التقييم.",tags:["Facilitator","Guide","F2F"]},
@@ -40,10 +37,7 @@ const DATA={
       {icon:"⚡",num:"06",name:"Effective Blended Learning",desc:"Strategies for blending face-to-face and digital learning to maximize engagement.",tags:["Blended","Strategy"]},
     ],
     prototypes:[
-      {icon:"💻",name:"Computer Components Module",desc:"Interactive prototype including video, exercises, and a gamification activity.",tags:["Interactive","Articulate","Gamification"]},
-      {icon:"🔐",name:"Digital Safety Lesson",desc:"Scenario-based eLearning module teaching digital safety practices.",tags:["Scenario","eLearning"]},
-      {icon:"📱",name:"Microlearning App",desc:"Mobile app prototype for 5-minute microlearning units.",tags:["Microlearning","Mobile","UX"]},
-      {icon:"🧩",name:"Matching Game",desc:"Gamified activity prototype matching concepts to definitions using interactive cards.",tags:["Game","Matching","Assessment"]},
+      {icon:"🌱",name:"The Journey of the Last Device",desc:"Interactive prototype including video, exercises, and a gamification activity.",tags:["Interactive","Articulate","Gamification"]},
     ],
     training:[
       {icon:"📘",name:"Facilitator Guide — Computer Fundamentals",desc:"Comprehensive guide with session plan, activities, and assessment tools.",tags:["Facilitator","Guide","F2F"]},
