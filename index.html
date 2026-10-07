@@ -20,14 +20,14 @@
      NAV
 ═══════════════════════════════════════════════ -->
 <nav>
-  <div class="nav-logo" onclick="showView('main')" id="nav-logo">Amani AL-Malki</div>
+  <div class="nav-logo" onclick="showView('main')" id="nav-logo">أماني المالكي </div>
   <div class="nav-links">
-    <a href="#about" id="n-about" onclick="goSection('about')">About</a>
-    <a href="#experience" id="n-exp" onclick="goSection('experience')">Experience</a>
-    <a href="#skills" id="n-skills" onclick="goSection('skills')">Skills</a>
-    <a href="#projects" id="n-projects" onclick="goSection('projects')">Projects</a>
-    <a href="#gallery" id="n-gallery" onclick="goSection('gallery')">Gallery</a>
-    <a href="#certs" id="n-certs" onclick="goSection('certs')">Certificates</a>
+    <a href="#about" id="n-about" onclick="goSection('about')">عن</a>
+    <a href="#experience" id="n-exp" onclick="goSection('experience')">الخبرات</a>
+    <a href="#skills" id="n-skills" onclick="goSection('skills')">المهارات</a>
+    <a href="#projects" id="n-projects" onclick="goSection('projects')">المشاريع</a>
+    <a href="#gallery" id="n-gallery" onclick="goSection('gallery')">المعرض</a>
+    <a href="#certs" id="n-certs" onclick="goSection('certs')">الشهادات</a>
   </div>
   <div class="nav-ctrl">
     <button class="ctrl-btn" id="lang-btn" onclick="toggleLang()">EN</button>
@@ -398,9 +398,9 @@
     <div class="doc-viewer">
       <div class="doc-bar">
         <div class="doc-tabs">
-          <button class="d-tab on" onclick="dTab('dov',this)" id="dt1"> نموذج SAM</button>
+          <button class="d-tab on" onclick="dTab('dov',this)" id="dt1"> نموذج SAM </button>
           <button class="d-tab" onclick="dTab('dan',this)" id="dt2">نموذج ADDIE</button>
-          <button class="d-tab" onclick="dTab('ddes',this)" id="dt3">وثيقة التصميم</button>
+          <button class="d-tab" onclick="dTab('ddes',this)" id="dt3"> ----- </button>
         </div>
         <button class="ctrl-btn" style="font-size:11px">↓</button>
       </div>
@@ -450,16 +450,9 @@
   </object>
 </div>
 
-
         </div>
         <div class="d-sec" id="ddes">
-          <ul class="doc-list" id="dlist-des">
-            <li>صياغة 4 أهداف تعليمية قابلة للقياس وفق نموذج SMART</li>
-            <li>تصميم هيكل المقرر: 4 وحدات × 3 دروس لكل وحدة</li>
-            <li>اختيار استراتيجيات التلعيب: نقاط، شارات، لوحات الصدارة</li>
-            <li>تصميم مسارات التعلم التكيفي بناءً على أداء المتعلم</li>
-            <li>تخطيط آليات التقييم التكويني والختامي</li>
-          </ul>
+          
         </div>
       </div>
     </div>
@@ -468,25 +461,84 @@
 
 <!-- ── STORYBOARDS ── -->
 <div class="view" id="view-sb">
+  <!-- شريط الملاحة والتنقل -->
   <div class="sub-bar">
-    <button class="back-btn" onclick="closeGallery()"><span id="bb2">← رجوع</span></button>
-    <div class="breadcrumb"><span id="bc2g">المعرض</span> / <span id="bc2s">السيناريوهات</span></div>
+    <button class="back-btn" onclick="closeGallery()">
+      <span id="bb2">← رجوع</span>
+    </button>
+    <div class="breadcrumb">
+      <span id="bc2g">المعرض</span> / <span id="bc2s">السيناريوهات</span>
+    </div>
   </div>
+
+  <!-- المحتوى الرئيسي -->
   <div class="sub-content">
+    <!-- القسم التعريفي -->
     <div class="sub-hero">
       <h2 id="sb-h">السيناريوهات التعليمية</h2>
       <p id="sb-p">تصور مرئي لتسلسل شاشات وحدات التعلم الإلكتروني قبل الدخول في مرحلة التطوير.</p>
-      <div class="stags"><span class="stag">eLearning</span><span class="stag">Articulate</span><span class="stag">UX</span></div>
+      <div class="stags">
+        <span class="stag">eLearning</span>
+        <span class="stag">Articulate</span>
+        <span class="stag">UX</span>
+      </div>
     </div>
-    <div class="sb-grid" id="sb-grid"></div>
+
+    <!-- قسم نماذج التصميم التعليمي (SAM & ADDIE) -->
+    <div class="doc-werr">
+      <div class="doc-barr">
+        <div class="doc-tabss">
+          <button class="d-tabb on" onclick="sTab('d', this)" id="ct1">تصميم سيناريو نقاء</button>
+          <button class="d-tabb" onclick="sTab('dd', this)" id="ct2">نموذج ADDIE</button>
+          <button class="d-tabb" onclick="sTab('ddd', this)" id="ct3">-----</button>
+        </div>
+        <button class="ctrl-btn" style="font-size:11px">↓</button>
+      </div>
+
+      <div class="doc-bodyy">
+        <!-- القسم الأول: نموذج SAM -->
+        <div class="d-secc on" id="d">
+          <div class="doc-ww">
+            <div style="width: 100%; height: 100%; overflow-y: auto; -webkit-overflow-scrolling: touch; border-radius: 8px;">
+              <object data="file/sam_model.pdf#view=FitH&toolbar=0&navpanes=0" type="application/pdf" width="100%" height="100%">
+                <iframe src="file/sam_model.pdf#view=FitH&toolbar=0&navpanes=0" width="100%" height="100%" style="border: none;"></iframe>
+              </object>
+            </div>
+          </div>
+        </div>
+
+        <!-- القسم الثاني: نموذج ADDIE -->
+        <div class="d-secc" id="dd">
+          <div class="doc-ww">
+            <div style="width: 100%; height: 100%; overflow-y: auto; -webkit-overflow-scrolling: touch; border-radius: 8px;">
+              <object data="file/addie_model.pdf#view=FitH&toolbar=0&navpanes=0" type="application/pdf" width="100%" height="100%">
+                <iframe src="file/addie_model.pdf#view=FitH&toolbar=0&navpanes=0" width="100%" height="100%" style="border: none;"></iframe>
+              </object>
+            </div>
+          </div>
+        </div>
+
+        <!-- القسم الثالث: الاحتياطي/المستقبلي -->
+        <div class="d-secc" id="ddd">
+          <div class="doc-ww">
+            <!-- محتوى القسم الثالث إن وجد -->
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <!-- النافذة المنبثقة (Overlay) -->
   <div class="sub-overlay" id="sb-ov" onclick="closeDet('sb-ov',event)">
     <div class="det-box">
       <button class="det-close" onclick="closeDet('sb-ov')">✕</button>
-      <h3 id="sbd-t"></h3><p id="sbd-d"></p><div class="stags" id="sbd-tags"></div>
+      <h3 id="sbd-t"></h3>
+      <p id="sbd-d"></p>
+      <div class="stags" id="sbd-tags"></div>
     </div>
   </div>
 </div>
+
 
 <!-- ── JOURNEY ── -->
 <div class="view" id="view-journey">
@@ -501,9 +553,7 @@
     </div>
     <div class="jrn-wrap">
       <div class="j-phases" id="j-phases"></div>
-      <div class="divider"></div>
       <div class="emo-wrap">
-        <div class="emo-lbl" id="emo-lbl">مستوى الانخراط عبر المراحل — انقر على الأعمدة</div>
         <div class="emo-track" id="emo-track"></div>
         <div class="emo-bars-lbl" id="emo-blbls"></div>
       </div>

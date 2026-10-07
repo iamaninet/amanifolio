@@ -1,24 +1,11 @@
 
+
+
 /* ── DATA ── */
 const DATA={
   ar:{
-    sbScreens:[
-      {num:"01",title:"شاشة الترحيب",desc:"شاشة الدخول للمقرر تتضمن عنوان الوحدة وأهدافها وزر البدء مع تحفيز بصري.",tags:["Intro","Gamification"]},
-      {num:"02",title:"الأهداف التعليمية",desc:"عرض الأهداف بأسلوب تفاعلي يطلب من الطالب توقّع ما سيتعلمه.",tags:["Objectives","Interactive"]},
-      {num:"03",title:"المحتوى الأساسي",desc:"تقديم المفهوم الرئيسي عبر نص موجز ومرفق بصورة توضيحية.",tags:["Content","Visual"]},
-      {num:"04",title:"مثال تطبيقي",desc:"سيناريو واقعي يعيش فيه الطالب الموقف ثم يختار الحل المناسب.",tags:["Scenario","Apply"]},
-      {num:"05",title:"تقييم تكويني",desc:"3 أسئلة متعددة الخيارات مع تغذية راجعة فورية ومخصصة.",tags:["Formative","Feedback"]},
-      {num:"06",title:"شارة الإنجاز",desc:"تُمنح الشارة عند اجتياز الوحدة مع رسالة تحفيزية شخصية.",tags:["Badge","Motivation"]},
-      {num:"07",title:"ملخص الوحدة",desc:"عرض النقاط الرئيسية مع رابط لتحميل ورقة المراجعة.",tags:["Summary","Review"]},
-      {num:"08",title:"الانتقال للوحدة التالية",desc:"لوحة التقدم الكلي وزر الانتقال للوحدة التالية مع نظرة عليها.",tags:["Navigation","Progress"]},
-    ],
-    journeyPhases:[
-      {icon:"🔍",label:"الاكتشاف",sub:"التعرف على المقرر",feeling:40,detail:"يكتشف الطالب المقرر عبر المدرسة أو المنصة. المشاعر: فضول مشوب بتردد. نقطة التحسين: تقديم مقطع تعريفي جذاب."},
-      {icon:"🚀",label:"البدء",sub:"التسجيل والدخول",feeling:65,detail:"يُسجّل الطالب ويخوض تجربة الإعداد الأولي. المشاعر: حماس وترقب. نقطة التحسين: تبسيط خطوات الإعداد."},
-      {icon:"📖",label:"التعلم",sub:"الوحدات والأنشطة",feeling:80,detail:"يتفاعل الطالب مع المحتوى والأنشطة والتحديات. المشاعر: انخراط وتحدٍّ صحي. نقطة التحسين: ضبط مستوى الصعوبة."},
-      {icon:"🎯",label:"التقييم",sub:"الاختبارات والشارات",feeling:60,detail:"يخوض الطالب تقييمات تكوينية وختامية. المشاعر: قلق وتحفز. نقطة التحسين: تغذية راجعة فورية ومشجعة."},
-      {icon:"🌟",label:"التطبيق",sub:"المشاريع والأثر",feeling:90,detail:"يطبق الطالب ما تعلمه في مشروع حقيقي. المشاعر: فخر وإنجاز. نقطة التحسين: ربط المشروع بسياق واقعي."},
-    ],
+
+    
     presentations:[
       {icon:"🎓",num:"01",name:"مقدمة في التصميم التعليمي",desc:"ورشة تعريفية بمبادئ التصميم التعليمي لمدربين جدد في المجال.",tags:["Workshop","ID","Intro"]},
       {icon:"🤖",num:"02",name:"الذكاء الاصطناعي في التعلم",desc:"ورشة حول توظيف أدوات الذكاء الاصطناعي في تصميم تجارب التعلم.",tags:["AI","Innovation","EdTech"]},
@@ -42,23 +29,8 @@ const DATA={
     ]
   },
   en:{
-    sbScreens:[
-      {num:"01",title:"Welcome Screen",desc:"Module entry screen featuring the unit title, objectives, and a start button with visual motivation.",tags:["Intro","Gamification"]},
-      {num:"02",title:"Learning Objectives",desc:"Interactive objectives display asking learners to predict what they'll learn.",tags:["Objectives","Interactive"]},
-      {num:"03",title:"Core Content",desc:"Main concept delivered through concise text paired with a visual illustration.",tags:["Content","Visual"]},
-      {num:"04",title:"Applied Example",desc:"A real-world scenario where learners experience a situation and choose the best solution.",tags:["Scenario","Apply"]},
-      {num:"05",title:"Formative Assessment",desc:"3 multiple-choice questions with immediate, personalized feedback.",tags:["Formative","Feedback"]},
-      {num:"06",title:"Achievement Badge",desc:"Badge awarded on unit completion with a personalized motivational message.",tags:["Badge","Motivation"]},
-      {num:"07",title:"Unit Summary",desc:"Key points recap with a link to download a review sheet.",tags:["Summary","Review"]},
-      {num:"08",title:"Next Unit Transition",desc:"Overall progress board and next unit preview with navigation button.",tags:["Navigation","Progress"]},
-    ],
-    journeyPhases:[
-      {icon:"🔍",label:"Discovery",sub:"Finding the course",feeling:40,detail:"Learner discovers the course through school or platform. Feelings: curiosity mixed with hesitation. Improvement: create an engaging intro video."},
-      {icon:"🚀",label:"Onboarding",sub:"Registration & setup",feeling:65,detail:"Learner registers and goes through initial setup. Feelings: excitement and anticipation. Improvement: simplify setup steps."},
-      {icon:"📖",label:"Learning",sub:"Units & activities",feeling:80,detail:"Learner engages with content, activities, and challenges. Feelings: engagement and healthy challenge. Improvement: calibrate difficulty levels."},
-      {icon:"🎯",label:"Assessment",sub:"Tests & badges",feeling:60,detail:"Learner takes formative and summative assessments. Feelings: anxiety mixed with drive. Improvement: provide immediate, encouraging feedback."},
-      {icon:"🌟",label:"Application",sub:"Projects & impact",feeling:90,detail:"Learner applies knowledge in a real project. Feelings: pride and accomplishment. Improvement: connect projects to real-world context."},
-    ],
+      
+   
     presentations:[
       {icon:"🎓",num:"01",name:"Introduction to Instructional Design",desc:"An introductory workshop on ID principles for new trainers and educators.",tags:["Workshop","ID","Intro"]},
       {icon:"🤖",num:"02",name:"AI in Learning Design",desc:"Workshop on leveraging AI tools for designing impactful learning experiences.",tags:["AI","Innovation","EdTech"]},
@@ -144,10 +116,9 @@ const STRINGS={
     "bc2s":"السيناريوهات","bc3s":"خريطة الرحلة","bc4s":"العروض","bc5s":"النماذج","bc6s":"المواد التدريبية",
     "docs-h":"وثائق التصميم التعليمي","docs-p":"مجموعة من وثائق التصميم التعليمي التي توثّق مراحل التحليل والتصميم والتطوير.",
   
-    "dt1":" SAM نموذج ","dt2":"تحليل الاحتياجات","dt3":"وثيقة التصميم",
+    "dt1":" SAM نموذج ","dt2":"تحليل الاحتياجات","dt3":" ",
 
     "dlist-an":"<li>تحديد الفجوة بين الأداء الحالي والمستوى المستهدف</li><li>إجراء مقابلات مع المعلمين لفهم تحديات التدريس</li><li>تحليل المناهج الدراسية الحالية وتحديد مواطن القصور</li><li>رسم خريطة الفروق الفردية في مستوى التقنية</li><li>تحديد قيود البيئة التعليمية: أجهزة، اتصال، وقت</li>",
-    "dlist-des":"<li>صياغة 4 أهداف تعليمية قابلة للقياس وفق نموذج SMART</li><li>تصميم هيكل المقرر: 4 وحدات × 3 دروس</li><li>اختيار استراتيجيات التلعيب: نقاط، شارات، لوحات الصدارة</li><li>تصميم مسارات التعلم التكيفي</li><li>تخطيط آليات التقييم التكويني والختامي</li>",
     "sb-h":"السيناريوهات التعليمية","sb-p":"تصور مرئي لتسلسل شاشات وحدات التعلم الإلكتروني قبل الدخول في مرحلة التطوير.",
     "jrn-h":"خريطة رحلة المتعلم","jrn-p":"تصور مراحل تجربة الطالب من لحظة الاكتشاف حتى التطبيق الفعلي.",
     "emo-lbl":"مستوى الانخراط عبر المراحل — انقر على الأعمدة",
@@ -206,7 +177,7 @@ const STRINGS={
     "docs-h":"Instructional Design Documents","docs-p":"A collection of ID documents covering analysis, design, and development phases.",
     
     "dt1":"SAM Model","dt2":"ADDIE Model","dt3":"Design Document",
-
+    "ct1":"StoryBoard Naqa", "ct2":"",
     "dlp":"Project","dlm":"Model","dld":"Duration","dlt":"Tools",
     "dlist-an":"<li>Identify the gap between current and target performance</li><li>Interview teachers to understand teaching challenges</li><li>Analyze existing curricula and identify gaps</li><li>Map individual differences in technology proficiency</li><li>Identify learning environment constraints: devices, connectivity, time</li>",
     "dlist-des":"<li>Write 4 measurable learning objectives using the SMART model</li><li>Design course structure: 4 units × 3 lessons each</li><li>Select gamification strategies: points, badges, leaderboards</li><li>Design adaptive learning paths based on learner performance</li><li>Plan formative and summative assessment mechanisms</li>",
@@ -400,6 +371,15 @@ function showTab(t,btn){
   document.getElementById('panel-'+t).classList.add('on');
   btn.classList.add('on');
 }
+
+function sTab(id,btn){
+  document.querySelectorAll('.d-secc').forEach(c=>c.classList.remove('on'));
+  document.querySelectorAll('.d-tabb').forEach(v=>v.classList.remove('on'));
+  document.getElementById(id).classList.add('on');
+  btn.classList.add('on');
+}
+
+
 
 /* ── MODAL ── */
 /*function openModal(){document.getElementById('proj-modal').classList.add('open')}*/
